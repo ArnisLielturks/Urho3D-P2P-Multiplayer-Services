@@ -1,10 +1,10 @@
 # Create new droplet with docker installed
 resource "digitalocean_droplet" "p2p-services" {
-  image     = "docker-18-04"
-  name      = "p2p-services"
-  region    = "${var.do_region}"
-  size      = "s-1vcpu-1gb"
-  ssh_keys  = [digitalocean_ssh_key.server-key.fingerprint]
+  image    = "docker-18-04"
+  name     = "p2p-services"
+  region   = "${var.do_region}"
+  size     = "s-1vcpu-1gb"
+  ssh_keys = [digitalocean_ssh_key.server-key.fingerprint]
 
   # Set up SSH connection
   connection {
